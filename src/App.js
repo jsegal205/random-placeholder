@@ -5,7 +5,7 @@ const sources = [
   'http://baconmockup.com',
   'http://loremflickr.com',
   'http://lorempixel.com',
-  'http://lorempizza.com/',
+  'http://lorempizza.com',
   'https://morganfillman.space',
   'https://placebear.com',
   'http://placebeard.it',
@@ -92,6 +92,19 @@ class App extends Component {
     );
   }
 
+  renderFooter() {
+    const sourceMap = sources.map((s, i) => {
+      return (<a href={s} target="_blank" key={i}>{s}</a>);
+    });
+
+    return (
+      <div className="footer">
+        Thank you to the following services:
+        {sourceMap}
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className="App">
@@ -101,7 +114,6 @@ class App extends Component {
         <p>
           Have you ever spent too much time looking for the best placeholder image to use in your mockup?
         </p>
-
         <p className="App-intro">
           Please enter measurements!
         </p>
@@ -130,6 +142,7 @@ class App extends Component {
         <button onClick={this.generatePlaceholder}>Generate!</button>
         {this.renderError()}
         {this.renderPlaceholder()}
+        {this.renderFooter()}
       </div>
     );
   }
