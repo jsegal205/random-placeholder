@@ -48,6 +48,7 @@ class App extends Component {
     }
 
     this.setState({
+      error: '',
       placeholderBase: sources[Math.floor(Math.random() * sources.length)],
     });
   }
@@ -100,7 +101,7 @@ class App extends Component {
         <p>
           Have you ever spent too much time looking for the best placeholder image to use in your mockup?
         </p>
-        
+
         <p className="App-intro">
           Please enter measurements!
         </p>
