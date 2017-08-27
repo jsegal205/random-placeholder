@@ -54,11 +54,17 @@ class App extends Component {
   }
 
   handleHeightChange(val) {
-    this.setState({ height: val.target.value });
+    this.setState({
+      height: val.target.value,
+      placeholderBase: '',
+    });
   }
 
   handleWidthChange(val) {
-    this.setState({ width: val.target.value });
+    this.setState({
+      placeholderBase: '',
+      width: val.target.value
+    });
   }
 
   renderError() {
