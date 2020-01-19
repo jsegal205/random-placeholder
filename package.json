@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "http://jsegal205.github.io/random-placeholder",
   "dependencies": {
-    "eslint": "^4.5.0",
+    "eslint": "^4.18.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.11"
